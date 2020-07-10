@@ -1,0 +1,32 @@
+terminate called after throwing an instance of 'boost::archive::archive_exception'
+  what():  unregistered class - derived class not registered or exported
+[soilblast:56308] *** Process received signal ***
+[soilblast:56308] Signal: Aborted (6)
+[soilblast:56308] Signal code:  (-6)
+[soilblast:56308] [ 0] /lib64/libpthread.so.0[0x387840f7e0]
+[soilblast:56308] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x38780324f5]
+[soilblast:56308] [ 2] /lib64/libc.so.6(abort+0x175)[0x3878033cd5]
+[soilblast:56308] [ 3] /usr/local/gcc-9.2.0/lib64/libstdc++.so.6(+0x9e33b)[0x7fa8f4cd833b]
+[soilblast:56308] [ 4] /usr/local/gcc-9.2.0/lib64/libstdc++.so.6(+0x9c196)[0x7fa8f4cd6196]
+[soilblast:56308] [ 5] /usr/local/gcc-9.2.0/lib64/libstdc++.so.6(+0x9c1e1)[0x7fa8f4cd61e1]
+[soilblast:56308] [ 6] /usr/local/gcc-9.2.0/lib64/libstdc++.so.6(+0x9c425)[0x7fa8f4cd6425]
+[soilblast:56308] [ 7] ./paraEllip3d[0x464702]
+[soilblast:56308] [ 8] ./paraEllip3d[0x4664ec]
+[soilblast:56308] [ 9] ./paraEllip3d[0x46662b]
+[soilblast:56308] [10] /usr/local/boost-1.70.0-openmpi-4.0.2-gcc-9.2.0/lib/libboost_serialization.so.1.70.0(_ZN5boost7archive6detail14basic_oarchive11save_objectEPKvRKNS1_17basic_oserializerE+0x3c8)[0x7fa8f5bd3ba8]
+[soilblast:56308] [11] ./paraEllip3d[0x425fd4]
+[soilblast:56308] [12] ./paraEllip3d[0x426887]
+[soilblast:56308] [13] ./paraEllip3d[0x437600]
+[soilblast:56308] [14] ./paraEllip3d[0x4492d0]
+[soilblast:56308] [15] ./paraEllip3d[0x44c7df]
+[soilblast:56308] [16] ./paraEllip3d[0x4b6f12]
+[soilblast:56308] [17] /lib64/libc.so.6(__libc_start_main+0x100)[0x387801ed20]
+[soilblast:56308] [18] ./paraEllip3d[0x414141]
+[soilblast:56308] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node soilblast exited on signal 6 (Aborted).
+--------------------------------------------------------------------------

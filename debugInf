@@ -1,0 +1,43 @@
+  bdryZptYStart   1.000000e-02
+   boundaryFric   5.000000e-01
+  boundaryRateY   0.000000e+00
+  boundaryRateZ   0.000000e+00
+contactCohesion   0.000000e+00
+    contactDamp   8.500000e-01
+    contactFric   5.000000e-01
+        endSnap   1.000000e+00
+        endStep   1.000000e+04
+      forceDamp   0.000000e+00
+      gravAccel   9.800000e+00
+      gravScale   0.000000e+00
+     gridUpdate   3.000000e+00
+      massScale   7.500000e+01
+ maxRelaOverlap   1.000000e-02
+       mntScale   7.500000e+01
+     momentDamp   0.000000e+00
+       mpiProcX   1.000000e+00
+       mpiProcY   1.000000e+00
+       mpiProcZ   1.000000e+00
+     ompThreads   1.000000e+00
+           pinZ   1.000000e-02
+        poisson   2.500000e-01
+      shearRate  -3.973340e-10
+simpleShearType   3.000000e+00
+       simuType   9.030000e+02
+      specificG   2.650000e+00
+      startSnap   1.000000e+00
+      startStep   1.000000e+00
+    timeAccrued   0.000000e+00
+       timeStep   5.000000e-07
+ toInitParticle   0.000000e+00
+          young   4.500000e+10
+   boundaryFile   ini_boundary
+   particleFile   ini_particle
+
+     process ID     particle #
+              0            465
+
+           iter         commuT         migraT         totalT      overhead%
+           9999   1.283000e-06   5.591000e-06   6.781025e-02   1.013711e-02
+
+MPI_Wtime: 4.964804e+02 seconds

@@ -1,0 +1,177 @@
+###################################################################
+# Below are 25 generic parameters required by every simulation
+###################################################################
+
+#simulation type
+#001 - proceed simulation with preset state
+#002 - tune up mass percentage from number percentage
+#003 - trim particles to a certain space domain
+#101 - deposit spatially scattered particles into a rigid container
+#102 - resume deposition using specified data file of particles and boundaries
+#201 - isotropic 1, low confining pressure
+#202 - isotropic 2, increasing confining pressure
+#203 - isotropic 3, loading-unloading-reloading
+#301 - odometer 1
+#302 - odometer 2, loading-unloading-reloading
+#401 - triaxial 1
+#402 - triaxial 2, loading-unloading-reloading
+#411 - plane strain 1, in x direction
+#412 - plane strain 2, loading-unloading-reloading
+#501 - true triaxial 1, create confining stress state
+#502 - true triaxial 2, increase stress in one direction
+#601 - expand particles volume inside a virtual cavity
+#602 - resume simulation after expanding particles volume inside a virtual cavity
+#701 - couple with sonic fluid flow, bottom "left" part
+#702 - couple with sonic fluid flow, arbitrary rectangular "left" part
+#703 - couple with sonic fluid flow, spherical "left" part
+simuType  101
+
+#grids/processes in x, y, z directions for MPI parallelization, which
+#is recommended for more than thousands of particles. By default these
+#values are 1 for serial computing. They must satisfy equation:
+#mpiProcX * mpiProcY * mpiProcZ = np, where np is the number of processes
+#specified in mpirun command line.
+mpiProcX  2
+mpiProcY  2
+mpiProcZ  2
+
+#threads per process for OpenMP parallelization, which is recommended 
+#for more than thousands of particles. By default this value is 1 for 
+#single-thread computing. If it > 1, multiple-threads computing is 
+#invoked.
+ompThreads  1
+
+#starting time step, must >= 1
+startStep  1
+
+#ending time step, must >= 1
+endStep  5.0E+6
+
+#starting snapshot number, (endsStep - startStep +1) must be divided by (endSnap - startSnap + 1)
+startSnap  1
+
+#ending snapshot number
+endSnap  100
+
+#time accrued prior to computation
+timeAccrued  0
+
+#time step size
+timeStep  5.0E-7
+
+#coefficient of mass scaling
+massScale  1.0
+
+#coefficient of moment scaling
+mntScale  1.0
+
+#coefficient of gravity scaling
+gravScale  1.0
+
+#gravitational acceleration
+gravAccel  9.8
+
+#damping ratio of background damping of force
+forceDamp  0
+
+#damping ratio of background damping of moment
+momentDamp  0
+
+#damping ratio of inter-particle contact
+contactDamp  0.85
+
+#coefficient of inter-particle static friction
+contactFric  0.5
+
+#coefficient of particle-boundary static friction
+boundaryFric  0.5
+
+#coefficient of inter-particle cohesion
+#5.0e+8; cohesion between particles (10kPa)
+contactCohesion  0
+
+#particle Young's modulus
+#quartz sand E = 45GPa
+young  4.5E+10
+
+#particle Poisson's ratio
+#quartz sand v = 0.25
+poisson  0.25
+
+#particle specific gravity
+#quartz sand Gs = 2.65
+specificG  2.65
+
+#maximum relative overlap
+maxRelaOverlap  1.0E-2
+
+###################################################################
+# Below are additional parameters for simulation type 101
+###################################################################
+
+#container coordinates
+#minX minY minZ maxX maxY maxZ
+minX  0
+minY  0
+minZ  0
+maxX  0.02
+maxY  0.02
+maxZ  0.60
+
+#maxZ for floating particles
+#floatMaxZ  0.35
+
+#trimming height
+#coordinate in +Z direction to trim the particle assembly after deposition
+trimHeight  0.02
+
+#particle layers
+#0-one particle; 1-one layer of particles; 2-multiple layers of particles (default)
+particleLayers  2
+
+#particle aspect ratio
+#ratio of radius b to radius a
+ratioBA  0.8
+#ratio of radius c to radius a
+ratioCA  0.6
+
+#particle gradation curve
+#number of sieves
+sieveNum  5
+#[number-percentage-smaller, particle-size]
+1.00  2.50e-3
+0.80  2.30e-3
+0.60  2.00e-3
+0.30  1.50e-3
+0.10  1.00e-3
+
+#particle box size (half)
+ptclBoxSize  2.50E-03
+
+#bottom gap
+bottomGap  1
+
+#side gap
+sideGap  1
+
+#layer gap
+layerGap  0
+
+#horizontal generation mode: 
+#0-from side to side
+#1-xy symmetric, and from center outward
+#2-virtual meshing method for a wide range of particle size (default)
+genMode  0
+
+# particle boundary tracking and grid updating mode
+# 0 - update in +Z
+# 1 - update in +X, -X, +Y, -Y, +Z
+# 2 - update in +X, -X, +Y, -Y, +Z, -Z
+# default 0
+gridUpdate  0
+
+# drag coefficient
+Cd  0
+
+# ambient fluid density
+fluidDensity  1.225

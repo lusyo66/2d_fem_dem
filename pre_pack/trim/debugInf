@@ -1,0 +1,31 @@
+   boundaryFric   5.000000e-01
+contactCohesion   0.000000e+00
+    contactDamp   5.500000e-01
+    contactFric   5.000000e-01
+        endSnap   1.000000e+02
+        endStep   5.000000e+05
+      forceDamp   0.000000e+00
+      gravAccel   9.800000e+00
+      gravScale   1.000000e+00
+      massScale   1.000000e+00
+ maxRelaOverlap   1.000000e-02
+       mntScale   1.000000e+00
+     momentDamp   0.000000e+00
+       mpiProcX   1.000000e+00
+       mpiProcY   1.000000e+00
+       mpiProcZ   1.000000e+00
+     ompThreads   1.000000e+00
+        poisson   2.500000e-01
+       simuType   3.000000e+00
+      specificG   2.650000e+00
+      startSnap   1.000000e+00
+      startStep   1.000000e+00
+    timeAccrued   0.000000e+00
+       timeStep   1.000000e-06
+ toInitParticle   0.000000e+00
+          young   4.500000e+10
+   boundaryFiledeposit_boundary_ini
+   particleFile   ini_particle
+
+
+MPI_Wtime: 1.306867e-02 seconds

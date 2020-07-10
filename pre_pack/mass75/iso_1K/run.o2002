@@ -1,0 +1,19 @@
+Number of MPI processes does not match grids in data file!
+
+[soilblast:55243] *** Process received signal ***
+[soilblast:55243] Signal: Aborted (6)
+[soilblast:55243] Signal code:  (-6)
+[soilblast:55243] [ 0] /lib64/libpthread.so.0[0x387840f7e0]
+[soilblast:55243] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x38780324f5]
+[soilblast:55243] [ 2] /lib64/libc.so.6(abort+0x175)[0x3878033cd5]
+[soilblast:55243] [ 3] ./paraEllip3d[0x4b6729]
+[soilblast:55243] [ 4] /lib64/libc.so.6(__libc_start_main+0x100)[0x387801ed20]
+[soilblast:55243] [ 5] ./paraEllip3d[0x414141]
+[soilblast:55243] *** End of error message ***
+--------------------------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code. Per user-direction, the job has been aborted.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+mpirun noticed that process rank 0 with PID 0 on node soilblast exited on signal 6 (Aborted).
+--------------------------------------------------------------------------
